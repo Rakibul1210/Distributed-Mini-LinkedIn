@@ -1,0 +1,22 @@
+.container {
+    width: 400px;
+  }
+
+
+/* Center the "Forgot Password?" link */
+.text-center-forgot-password {
+    text-align: center;
+    margin-top: 10px;
+  }
+  
+  /* Move the "Create New Account" link to the right and add margin top */
+  .text-center-create-account {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  /* Add margin top to the Submit button */
+  .submit-button {
+    margin-top: 20px;
+  }
+  

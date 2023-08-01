@@ -38,7 +38,7 @@ const Navbar = () => {
               </a>
             </li>
           </ul>
-          <form className="d-flex ms-auto me-3">
+          {/* <form className="d-flex ms-auto me-3">
             <input
               className="form-control me-2"
               type="search"
@@ -48,15 +48,15 @@ const Navbar = () => {
             <button className="btn btn-outline-success" type="submit">
               Search
             </button>
-          </form>
+          </form> */}
           <div className="ms-3">
             <Link className="nav-link join-link" to="/SignUp">
-              Join Us
+              USERNAME
             </Link>
           </div>
           <div className="ms-3">
             <Link className="nav-link login-link" to="/Login">
-              Login
+              Log out
             </Link>
           </div>
         </div>

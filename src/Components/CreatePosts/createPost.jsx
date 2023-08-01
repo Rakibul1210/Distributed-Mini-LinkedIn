@@ -1,6 +1,6 @@
 import React from 'react'
 
-const post = () => {
+const CreatePost = () => {
   return (
     <>
     <div>Eikhaen post dekhabo</div>
@@ -9,4 +9,4 @@ const post = () => {
   )
 }
 
-export default post;
+export default CreatePost;

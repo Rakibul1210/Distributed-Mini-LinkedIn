@@ -7,8 +7,8 @@ import DataProvider from "./Context/DataProvider.jsx";
 import Navbar from "./Components/Navbar.js";
 import Login from "./Components/Authentication/Login.js";
 import SignUp from "./Components/Authentication/SignUp";
-// import Home from "./Components/Home.js";
-import Post from "./Components/Posts/post.jsx";
+import Home from "./Components/Home.js";
+// import CreatePost from "./Components/CreatePosts/createPost.jsx";
 
 const PrivateRoute = ({ authenticated, ...props }) => {
   console.log("is authenticated: ", authenticated);
@@ -33,14 +33,15 @@ function App() {
           <Route path="/Login" element={<Login setAuthenticated={setAuthenticated} />} />
           <Route path="/SignUp" element={<SignUp />} />
 
-          {/* <Route path='/' element={<PrivateRoute authenticated={authenticated} />} >
-            <Route path='/' element={<Home />} />
-
-          </Route> */}
 
           <Route path='/' element={<PrivateRoute authenticated={authenticated} />} >
-            <Route path='/' element={<Post />} />
+            <Route path='/' element={<Home />} />
           </Route>
+
+
+          {/* <Route path='/createPost' element={<PrivateRoute authenticated={authenticated} />} >
+            <Route path='/createPost' element={<CreatePost />} />
+          </Route> */}
 
         </Routes>
       </Router>

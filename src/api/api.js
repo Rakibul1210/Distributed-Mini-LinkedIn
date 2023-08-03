@@ -1,12 +1,8 @@
 import axios from "axios";
 import { API_NOTIFICATION_MESSAGES, SERVICE_URLS } from "../Constants/config.js";
+import { getAccessToken } from "../Token/token.js";
 
-// import {
-//   getAccessToken,
-//   getRefreshToken,
-//   setAccessToken,
-//   getType,
-// } from "../utils/common-utils";
+
 
 const API_URL = "http://localhost:8000";
 
@@ -141,9 +137,9 @@ for (const [key, value] of Object.entries(SERVICE_URLS)) {
       url: value.url,
       data: value.method === "DELETE" ? "" : body,
       responseType: value.responseType,
-      //     headers: {
-      //       authorization: getAccessToken(),
-      //     },
+      headers: {
+        authorization: getAccessToken(),
+      },
       //   TYPE: getType(value, body),
       onUploadProgress: function (progressEvent) {
         if (showUploadProgress) {

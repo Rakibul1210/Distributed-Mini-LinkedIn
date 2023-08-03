@@ -2,7 +2,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { PlusCircleOutlined } from "@ant-design/icons";
-import { Button, Tooltip } from "antd";
+import { Button, List, Tooltip } from "antd";
 
 const Home = () => {
   return (
@@ -20,7 +20,14 @@ const Home = () => {
       </div>
 
       {/* Rest of your content */}
-      <div style={styles.content}>Posts will be shown here</div>
+      <div style={styles.content}>
+        <ol>
+          <List> Post one</List>
+          <List> Post two</List>
+          <List> Post three</List>
+
+        </ol>
+      </div>
     </div>
   );
 };
@@ -35,19 +42,18 @@ const styles = {
     paddingTop: "20px"
   },
   buttonContainer: {
-    width: "60%",
+    width: "50%",
   },
   buttonWrapper: {
     display: "flex",
     justifyContent: "center",
-    background: "#f0f0f0", // Add a background color for the container if desired
+    background: "#f0f0f0",
     padding: "10px",
     borderRadius: "8px",
-    width: "100%", // Make the button wrapper take full width
+    width: "100%",
   },
   button: {
-    // No need to set width here, button will inherit its parent's width (buttonWrapper)
-    width: "860px",
+    width: "660px",
     height: "45px"
   },
   content: {

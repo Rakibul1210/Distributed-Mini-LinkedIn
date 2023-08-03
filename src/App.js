@@ -8,13 +8,13 @@ import Navbar from "./Components/Navbar.js";
 import Login from "./Components/Authentication/Login.js";
 import SignUp from "./Components/Authentication/SignUp";
 import Home from "./Components/Home.js";
-// import CreatePost from "./Components/CreatePosts/createPost.jsx";
+import CreatePost from "./Components/CreatePosts/createPost.jsx";
 
-const PrivateRoute = ({ authenticated, ...props }) => {
-  console.log("is authenticated: ", authenticated);
-  return authenticated ?
+const PrivateRoute = ({ userName, ...props }) => {
+  console.log("user Name from private route: ", userName);
+  return userName ?
     <>
-      <Navbar />
+      <Navbar userName={userName} />
       <Outlet />
     </>
     :
@@ -23,25 +23,25 @@ const PrivateRoute = ({ authenticated, ...props }) => {
 };
 
 function App() {
-  const [authenticated, setAuthenticated] = useState(false);
+  const [userName, setUserName] = useState('');
 
   return (
     <DataProvider>
       <Router>
         {/* <Navbar /> */}
         <Routes>
-          <Route path="/Login" element={<Login setAuthenticated={setAuthenticated} />} />
+          <Route path="/Login" element={<Login setUserName={setUserName} />} />
           <Route path="/SignUp" element={<SignUp />} />
 
 
-          <Route path='/' element={<PrivateRoute authenticated={authenticated} />} >
+          <Route path='/' element={<PrivateRoute userName={userName} />} >
             <Route path='/' element={<Home />} />
           </Route>
 
 
-          {/* <Route path='/createPost' element={<PrivateRoute authenticated={authenticated} />} >
-            <Route path='/createPost' element={<CreatePost />} />
-          </Route> */}
+          <Route path='/createPost' element={<PrivateRoute userName={userName} />} >
+            <Route path='/createPost' element={<CreatePost userName={userName} />} />
+          </Route>
 
         </Routes>
       </Router>

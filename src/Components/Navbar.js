@@ -1,9 +1,9 @@
 import React from "react";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "./Navbar.css"; // Import custom CSS for Navbar
+import "./Navbar.css";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({ userName }) => {
   return (
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
       <div className="container-fluid">
@@ -38,22 +38,10 @@ const Navbar = () => {
               </a>
             </li>
           </ul>
-          {/* <form className="d-flex ms-auto me-3">
-            <input
-              className="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button className="btn btn-outline-success" type="submit">
-              Search
-            </button>
-          </form> */}
-          <div className="ms-3">
-            <Link className="nav-link join-link" to="/SignUp">
-              USERNAME
-            </Link>
+          <div className="ms-3" >
+            {userName}
           </div>
+          <div className="ms-3">|</div>
           <div className="ms-3">
             <Link className="nav-link login-link" to="/Login">
               Log out

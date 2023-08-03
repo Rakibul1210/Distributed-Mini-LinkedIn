@@ -1,14 +1,37 @@
-.join-link:hover,
-.login-link:hover {
-  font-style: bold;
-  text-decoration: none;
-  background-color: #28a745;
-  color: #fff;
-  transition: background-color 0.3s ease-in-out;
-  /* -webkit-transition: background-color 0.3s ease-in-out;
-  -moz-transition: background-color 0.3s ease-in-out;
-  -o-transition: background-color 0.3s ease-in-out;
-  -ms-transition: background-color 0.3s ease-in-out; */
-  border-radius: 5px;
-  
+/* Navbar.css
+.navbar {
+  display: flex;
+  align-items: center;
 }
+
+.navbar-brand {
+  flex: 1;
+}
+
+.navbar-nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.navbar-nav li {
+  margin-right: 10px;
+}
+
+.navbar-nav li:last-child {
+  margin-right: 0;
+}
+
+.nav-separator {
+  display: flex;
+  align-items: center;
+  margin-right: 10px;
+}
+
+.nav-separator::before {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: #fff; 
+  margin-right: 10px;
+} */

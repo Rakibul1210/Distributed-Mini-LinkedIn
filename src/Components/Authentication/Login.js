@@ -7,7 +7,7 @@ import API from "../../api/api.js";
 import { Typography } from "@mui/material";
 import { DataContext } from "../../Context/DataProvider.jsx";
 
-const Login = ({ setAuthenticated }) => {
+const Login = ({ setUserName }) => {
   const [error, setError] = useState("");
   const { setAccount } = useContext(DataContext);
   const navigate = useNavigate();
@@ -18,9 +18,10 @@ const Login = ({ setAuthenticated }) => {
       console.log("response from server:", res);
 
       if (res.isSuccess) {
-        console.log("login successful!");
-        setAuthenticated(true);
-        console.log("setted authenticed to true");
+        console.log("login successful!", res.data.fullName);
+
+        setUserName(res.data.fullName);
+        console.log("logged in as:", res.data.fullName);
 
 
         sessionStorage.setItem("accessToken", `Bearar ${res.data.accessToken}`);

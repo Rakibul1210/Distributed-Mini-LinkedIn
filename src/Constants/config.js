@@ -30,6 +30,7 @@ export const API_NOTIFICATION_MESSAGES = {
 export const SERVICE_URLS = {
   signUp: { url: "/signUp", method: "POST" },
   login: { url: "/login", method: "POST" },
+  uploadPost: { url: "/uploadPost", method: "POST" }
   //     getAllPosts: { url: '/posts', method: 'GET', params: true },
   //     getRefreshToken: { url: '/token', method: 'POST' },
   //     uploadFile: { url: 'file/upload', method: 'POST' },

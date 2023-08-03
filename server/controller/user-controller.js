@@ -23,8 +23,9 @@ export const signUp = async (req, res) => {
     console.log("Gonna create this user: ", newUser);
 
     await newUser.save();
-    res.json({ msg: "user created successfully" });
     console.log("user created successfully");
+    return res.json({ msg: "user created successfully" });
+
   } catch (err) {
     console.log("error creating user");
     return res.json({ msg: "error creating user" });

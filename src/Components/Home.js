@@ -2,7 +2,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { PlusCircleOutlined } from "@ant-design/icons";
-import { Button, List, Tooltip } from "antd";
+import { Button, Tooltip } from "antd";
+
+
+import Posts from "../Components/Posts/posts.jsx";
 
 const Home = () => {
   return (
@@ -21,12 +24,7 @@ const Home = () => {
 
       {/* Rest of your content */}
       <div style={styles.content}>
-        <ol>
-          <List> Post one</List>
-          <List> Post two</List>
-          <List> Post three</List>
-
-        </ol>
+        <Posts />
       </div>
     </div>
   );
@@ -39,10 +37,11 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    paddingTop: "20px"
+    paddingTop: "20px",
+    background: "#f7f7f7"
   },
   buttonContainer: {
-    width: "50%",
+    width: "",
   },
   buttonWrapper: {
     display: "flex",
@@ -50,10 +49,11 @@ const styles = {
     background: "#f0f0f0",
     padding: "10px",
     borderRadius: "8px",
-    width: "100%",
+    width: "700px",
   },
   button: {
     width: "660px",
+    alignItems: "flex-star",
     height: "45px"
   },
   content: {

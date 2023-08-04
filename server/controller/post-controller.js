@@ -5,6 +5,8 @@ import Post from "../model/post.model.js";
 
 export const uploadPost = async (req, res) => {
 
+
+
     console.log('uploadPost: ', req.body);
 
     try {
@@ -35,5 +37,21 @@ export const uploadPost = async (req, res) => {
     };
 
 
+
+}
+
+
+
+export const getAllPosts = async (req, res) => {
+    console.log("So you're here to get all posts");
+    try {
+
+        let posts = await Post.find({});
+        console.log("All Posts: ", posts);
+        return res.status(200).json(posts);
+    } catch {
+        console.log("Error getting posts");
+        return res.status(500).json({ msg: error.message });
+    }
 
 }

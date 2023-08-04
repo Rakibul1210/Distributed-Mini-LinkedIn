@@ -8,7 +8,7 @@ import Navbar from "./Components/Navbar.js";
 import Login from "./Components/Authentication/Login.js";
 import SignUp from "./Components/Authentication/SignUp";
 import Home from "./Components/Home.js";
-import CreatePost from "./Components/CreatePosts/createPost.jsx";
+import CreatePost from "./Components/Posts/createPost.jsx";
 
 const PrivateRoute = ({ userName, ...props }) => {
   console.log("user Name from private route: ", userName);

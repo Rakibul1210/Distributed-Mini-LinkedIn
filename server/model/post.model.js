@@ -2,7 +2,7 @@ import mongoose from 'mongoose';
 
 const PostSchema = mongoose.Schema({
 
-    desc: {
+    text: {
         type: String,
         required: true
     },

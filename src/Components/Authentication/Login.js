@@ -7,7 +7,7 @@ import API from "../../api/api.js";
 import { Typography } from "@mui/material";
 import { DataContext } from "../../Context/DataProvider.jsx";
 
-const Login = ({ setUserName }) => {
+const Login = ({ setUser }) => {
   const [error, setError] = useState("");
   const { setAccount } = useContext(DataContext);
   const navigate = useNavigate();
@@ -18,10 +18,10 @@ const Login = ({ setUserName }) => {
       console.log("response from server:", res);
 
       if (res.isSuccess) {
-        console.log("login successful!", res.data.fullName);
+        console.log("login successful!", res.data.user);
 
-        setUserName(res.data.fullName);
-        console.log("logged in as:", res.data.fullName);
+        setUser(res.data.user);
+        console.log("logged in as:", res.data.user);
 
 
         sessionStorage.setItem("accessToken", `Bearar ${res.data.accessToken}`);
@@ -29,7 +29,7 @@ const Login = ({ setUserName }) => {
           "refreshToken",
           `Bearar ${res.data.refreshToken}`
         );
-        setAccount({ fullName: res.data.fullName });
+        setAccount({ user: res.data.user });
 
         navigate("/");
       } else {

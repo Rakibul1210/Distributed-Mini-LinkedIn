@@ -10,11 +10,11 @@ import SignUp from "./Components/Authentication/SignUp";
 import Home from "./Components/Home.js";
 import CreatePost from "./Components/Posts/createPost.jsx";
 
-const PrivateRoute = ({ userName, ...props }) => {
-  console.log("user Name from private route: ", userName);
-  return userName ?
+const PrivateRoute = ({ user, ...props }) => {
+  console.log("user Name from private route: ", user);
+  return user ?
     <>
-      <Navbar userName={userName} />
+      <Navbar user={user} />
       <Outlet />
     </>
     :
@@ -23,24 +23,24 @@ const PrivateRoute = ({ userName, ...props }) => {
 };
 
 function App() {
-  const [userName, setUserName] = useState('');
+  const [user, setUser] = useState('');
 
   return (
     <DataProvider>
       <Router>
         {/* <Navbar /> */}
         <Routes>
-          <Route path="/Login" element={<Login setUserName={setUserName} />} />
+          <Route path="/Login" element={<Login setUser={setUser} />} />
           <Route path="/SignUp" element={<SignUp />} />
 
 
-          <Route path='/' element={<PrivateRoute userName={userName} />} >
+          <Route path='/' element={<PrivateRoute user={user} />} >
             <Route path='/' element={<Home />} />
           </Route>
 
 
-          <Route path='/createPost' element={<PrivateRoute userName={userName} />} >
-            <Route path='/createPost' element={<CreatePost userName={userName} />} />
+          <Route path='/createPost' element={<PrivateRoute user={user} />} >
+            <Route path='/createPost' element={<CreatePost user={user} />} />
           </Route>
 
         </Routes>

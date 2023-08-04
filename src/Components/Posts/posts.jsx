@@ -5,24 +5,6 @@ import Post from './post.jsx';
 const Posts = () => {
     const [posts, setPosts] = useState([]);
 
-    // useEffect(() => {
-    //     const fetchPosts = async () => {
-    //         // console.log("Fetching posts");
-    //         let res = await API.getAllPosts()
-    //         // console.log("request was send with", res.data);
-
-    //         if (res.isSuccess) {
-    //             setPosts(res.data);
-    //             console.log(" posts: ", posts);
-    //         }
-
-    //         // console.log("Dal meh kuch kala hain");
-    //     }
-    //     fetchPosts();
-    // }, []);
-
-
-
     useEffect(() => {
         const fetchPosts = async () => {
             let res = await API.getAllPosts();

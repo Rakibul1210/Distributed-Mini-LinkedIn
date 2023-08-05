@@ -33,6 +33,7 @@ export const SERVICE_URLS = {
   uploadPost: { url: "/uploadPost", method: "POST" },
   getAllPosts: { url: '/posts', method: 'GET' },
   getNotification: { url: '/notification', method: 'GET' },
+  notificationRead: { url: '/notificationRead', method: 'PUT' }
   //     getRefreshToken: { url: '/token', method: 'POST' },
   //     uploadFile: { url: 'file/upload', method: 'POST' },
   //     createPost: { url: 'create', method: 'POST' },

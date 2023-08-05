@@ -9,6 +9,8 @@ import Login from "./Components/Authentication/Login.js";
 import SignUp from "./Components/Authentication/SignUp";
 import Home from "./Components/Home.js";
 import CreatePost from "./Components/Posts/createPost.jsx";
+import Notifications from "./Components/Notification/notifications.jsx";
+import ViewPost from "./Components/Posts/viewPost.jsx";
 
 const PrivateRoute = ({ user, ...props }) => {
   console.log("user Name from private route: ", user);
@@ -42,6 +44,15 @@ function App() {
           <Route path='/createPost' element={<PrivateRoute user={user} />} >
             <Route path='/createPost' element={<CreatePost user={user} />} />
           </Route>
+
+          <Route path='/notifications' element={<PrivateRoute user={user} />} >
+            <Route path='/notifications' element={<Notifications user={user} />} />
+          </Route>
+
+          <Route path='/viewPost' element={<PrivateRoute user={user} />} >
+            <Route path='/viewPost' element={<ViewPost />} />
+          </Route>
+
 
         </Routes>
       </Router>

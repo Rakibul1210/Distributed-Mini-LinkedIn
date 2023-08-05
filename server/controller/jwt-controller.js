@@ -5,7 +5,7 @@ dotenv.config();
 
 const authenticateToken = async (req, res, next) => {
 
-    // console.log('we are here with', req.body);
+    console.log('we are at middle-ware with', req.body);
     const autheHeader = req.headers.authorization;
 
     // console.log('authheader', autheHeader);

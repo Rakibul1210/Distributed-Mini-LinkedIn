@@ -3,6 +3,10 @@ import { Card } from 'antd';
 import { formatDistanceToNow } from 'date-fns';
 
 export const Post = ({ post }) => {
+
+
+    console.log(" in post " + post);
+
     const timeAgo = formatDistanceToNow(new Date(post.createdDate), { addSuffix: true });
 
     return (

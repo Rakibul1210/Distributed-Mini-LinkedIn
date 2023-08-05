@@ -3,14 +3,14 @@ import User from "../model/user.model.js";
 import Notification from "../model/notification.model.js";
 
 export const uploadPost = async (req, res) => {
-    console.log('uploadPost: ', req.body);
+    console.log('uploadPost: ----------------------', req.body);
 
     try {
         const text = req.body.text;
-        console.log('text: ', text)
+        console.log('text: ', text);
 
         const user = req.user;
-        console.log('user: @@', user);
+        console.log('user: ', user);
 
         const newPost = new Post({
             text: text,
@@ -24,29 +24,37 @@ export const uploadPost = async (req, res) => {
         // Save the new post
         await newPost.save();
 
+
         // Send notifications to all other users
         const allUsersExceptPoster = await User.find({ _id: { $ne: user._id } });
 
-        console.log('allUsers: ', allUsersExceptPoster);
+        // console.log('allUsers: ', allUsersExceptPoster);
+
+
+        const postID = newPost._id;
+        console.log('postID: ******* ', postID);
 
         const notifications = allUsersExceptPoster.map((recipientUser) => {
             return new Notification({
+                posterName: user.fullName,
                 recipientUserID: recipientUser._id,
-                content: `${user.fullName} has posted a new post.`,
+                post: newPost,
             });
         });
 
+        console.log('----------------------------------------------------------------');
+        console.log('notifications: ', notifications);
+
+
+
         await Notification.insertMany(notifications);
+        console.log("notification creaded successfully");
 
         return res.status(200).json({ msg: "Post uploaded successfully" });
     } catch (error) {
         return res.status(500).json({ msg: "Error uploading post", error });
     }
 };
-
-
-
-
 
 
 

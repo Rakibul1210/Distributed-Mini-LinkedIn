@@ -139,6 +139,7 @@ for (const [key, value] of Object.entries(SERVICE_URLS)) {
       responseType: value.responseType,
       headers: {
         authorization: getAccessToken(),
+        // "Content-Type": "multipart/form-data"
       },
       //   TYPE: getType(value, body),
       onUploadProgress: function (progressEvent) {

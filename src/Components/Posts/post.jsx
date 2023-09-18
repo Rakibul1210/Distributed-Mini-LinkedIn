@@ -11,7 +11,7 @@ export const Post = ({ post }) => {
 
     return (
         <div style={{ display: 'flex', justifyContent: 'center', paddingTop: '20px' }}>
-            <Card title={post.userName} size="small" style={{ width: '50%', textAlign: 'left' }}>
+            <Card className='shadow' title={post.userName} size="small" style={{ width: '50%', textAlign: 'left' }}>
                 <p>{post.text}</p>
                 <div style={{ marginTop: '10px', color: '#888' }}>
                     {timeAgo}

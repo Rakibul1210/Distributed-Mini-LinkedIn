@@ -41,7 +41,7 @@ export const Notifiaction = ({ notification }) => {
     return (
         <div style={{ display: 'flex', justifyContent: 'center', paddingTop: '30px' }}>
             <div style={{ width: '50%', textAlign: 'left' }}>
-                <Card size="small" style={{ textAlign: 'left' }}>
+                <Card className='shadow-lg' size="small" style={{ textAlign: 'left' }}>
                     <p>
                         <Checkbox onChange={notificationRead} />
                         <div onClick={() => {
@@ -49,7 +49,7 @@ export const Notifiaction = ({ notification }) => {
                             notificationRead()
                         }
                         } style={{ textDecoration: 'none', color: 'inherit' }}  >
-                            <strong>{notification.posterName}</strong> posted a new post: {notification.post.text}
+                            <strong>{notification.posterName}</strong> posted a new post {notification.post.text}
                         </div>
                     </p>
                     <div style={{ marginTop: '10px', color: '#888' }}>

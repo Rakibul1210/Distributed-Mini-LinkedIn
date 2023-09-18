@@ -10,7 +10,7 @@ import Posts from "../Components/Posts/posts.jsx";
 const Home = () => {
   return (
     <div style={styles.container}>
-      <div style={styles.buttonContainer}>
+      <div className='shadow' style={styles.buttonContainer}>
         <div style={styles.buttonWrapper}>
           <Tooltip title="Start a post">
             <Link to="createPost">

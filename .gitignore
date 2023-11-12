@@ -1,2 +1,5 @@
-node_mudules/
-Authentication/auth-server/node_modules/
+Post/post-server/public/images
+Authentication/auth-server/node_modules
+client/node_modules
+Notification/notification-server/node_modules
+Post/post-server/node_modules

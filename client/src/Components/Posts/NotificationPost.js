@@ -76,11 +76,11 @@ const NotificationPost = () => {
                                                 >
                                                 <strong>{post.username}</strong>
                                             </p>
-                                            <p style={{ textAlign: 'left', fontSize: '14px', color: 'gray', marginBottom: '10px' }}>
+                                            <p style={{ textAlign: 'left',  fontSize: '14px', color: 'gray', marginBottom: '10px' }}>
                                                 {post.email}
                                             </p>
                                             <pre style={{ textAlign: 'left', whiteSpace: 'pre-wrap',
-                                                 fontSize: '16px',
+                                                fontFamily:'arial', fontSize: '16px',
                                         
                                         }}>{post.content}</pre>
                                         </div>

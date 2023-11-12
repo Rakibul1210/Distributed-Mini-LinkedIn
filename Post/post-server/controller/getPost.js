@@ -52,8 +52,7 @@ const getPost = async(req, res) =>{
                 const base64String = imageBuffer ? imageBuffer.toString('base64') : null;
                 const mimeType = 'image/jpeg';
                 const image = base64String ? `data:${mimeType};base64,${base64String}` : null;
-                // console.log("image: " + image);
-                // console.log('username: ' + user.username)
+               
                 return { 
                     ...post.toObject(), 
                     username: user ? user.username : 'Unknown',

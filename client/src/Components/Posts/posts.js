@@ -37,9 +37,7 @@ const Posts = () => {
                 <p style={{ 
                   textAlign: 'left', 
                   marginBottom: '5px',
-                  //fontFamily:'fantasy', 
                   fontSize :'18px'
-                  
                   
                   }}>
                     <strong>{post.username}</strong>
@@ -47,7 +45,6 @@ const Posts = () => {
                   <p style={{ 
                     textAlign: 'left', 
                     fontSize: '14px', 
-                    //fontFamily:'fantasy',
                     color: 'gray', 
                     marginBottom: '10px' }}>
                     {post.email}
@@ -64,7 +61,7 @@ const Posts = () => {
                 {post.imageId && <img 
                     src={`http://127.0.0.1:9000/linkedin-post/${post.imageId}`}
                     style={{ width: '100%', height: 'auto', }}
-                    alt="Post-image-not-found"
+                    alt="Post"
                 />}
 
                 <div style={{height:'20px'}}>

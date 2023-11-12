@@ -7,7 +7,7 @@ const createNotification = async (postId) => {
     try {
         // console.log("email: " + email)
         console.log("postId: " + postId)
-        const response = await axios.post(`http://host.docker.internal:${notificationPORT}/notification/createNotification/${postId}`);
+        const response = await axios.post(`http://host.docker.internal/notification/createNotification/${postId}`);
         return response
     } catch (error) {
         throw error;

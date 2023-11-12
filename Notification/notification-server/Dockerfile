@@ -2,7 +2,7 @@ FROM node:18-alpine
 
 RUN npm install -g nodemon
 
-WORKDIR /linkedin/notification
+WORKDIR /mini-linkedin/notification
 
 COPY . .
 

@@ -51,17 +51,17 @@ const Homepage = () =>{
     return(
         <>
             <Header/>
-                <Container className="align-items-center" style={{ height:'auto',minHeight: '100vh', width:"80%", backgroundColor:'#e6e6e6'}}>
+                <Container className="align-items-center" style={{ height:'auto',minHeight: '100vh', width:"80%", backgroundColor:'skyblue'}}>
                     <Row>
                         <Col className="" md={3}>
                           
                             <UserProfile/>
                         </Col>
 
-                        <Col style={{marginLeft:"10px", marginRight:"10px", height:'100%'}}  md={6}>
+                        <Col style={{marginLeft:"10px", marginRight:"10px", height:'100%',}}  md={8}>
           
                             <StartPost/>
-                            <hr/>
+                            {/* <hr/> */}
                             <Posts/>
 
                             

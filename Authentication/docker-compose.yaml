@@ -6,5 +6,5 @@ services:
     ports:
       - '8000:8000'
     volumes:
-      - ./auth-server:/linkedin/authentication
-      - ./linkedin/authentication/node_modules
+      - ./auth-server/linkedin/authentication
+      - ./mini-linkedin/authentication/node_modules

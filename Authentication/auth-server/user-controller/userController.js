@@ -17,7 +17,8 @@ const signupUser = async (req, res) => {
     console.log("userinfo : ", userInfo)
 
     const password = await bcrypt.hash(userInfo.signUpPass,10)
-
+    
+  
 
 
 
@@ -33,8 +34,8 @@ const signupUser = async (req, res) => {
 }
 
 const loginUser = async (req, res) => {
-    // res.send("login page")
     const userInfo = req.body.loginInfo
+    console.log(userInfo)
     let user =await User.findOne({email:userInfo.email})
     // console.log("user : ", user)
     console.log("password : ", userInfo.signInPass)
@@ -45,6 +46,7 @@ const loginUser = async (req, res) => {
     }
     try {
         console.log("decrypt password")
+        console.log(user.password)
         let match = await bcrypt.compare(userInfo.signInPass, user.password)
         console.log("match : ",match)
         if (match) {

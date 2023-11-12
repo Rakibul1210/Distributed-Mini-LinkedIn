@@ -89,7 +89,7 @@ const Notifications = () => {
                 >
                   <p style={{
                     textAlign: 'left',
-                    // fontFamily: 'sans-serif'
+                    fontFamily: 'sans-serif'
                   }}>
                     <strong>{notification.username}</strong> added a new post
                   </p>

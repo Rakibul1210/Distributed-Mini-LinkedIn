@@ -1,7 +1,7 @@
 import axios from "axios";
 
 const postAPI  = axios.create({
-    baseURL : `http://localhost:${process.env.REACT_APP_postPort}/posts`,
+    baseURL : `http://localhost/posts`,
     headers: {
         'Content-Type': 'application/json',
       },

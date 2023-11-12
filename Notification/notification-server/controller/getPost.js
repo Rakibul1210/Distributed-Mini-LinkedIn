@@ -5,8 +5,8 @@ const postPort = process.env.POST_PORT
 
 const getPost = async (postId) => {
     try {
-        // console.log("postId: " + postId)
-        const response = await axios.get(`http://host.docker.internal:${postPort}/posts/sendPost/${postId}`);
+        console.log("postId: " + postId)
+        const response = await axios.get(`http://host.docker.internal/posts/sendPost/${postId}`);
         return response.data;
     } catch (error) {
         throw error;

@@ -1,11 +1,11 @@
 FROM node:18-alpine
 
-WORKDIR /linkedin/frontend
+WORKDIR /frontend
 
-COPY package.json .
+COPY package*.json .
 
-RUN npm install
+RUN npm install --verbose
 
 COPY . .
 
-CMD ["npm", "start"]
+CMD [ "npm", "start"] 

@@ -2,7 +2,7 @@ FROM node:18-alpine
 
 RUN npm install -g nodemon
 
-WORKDIR /linkedin/post
+WORKDIR /mini-linkedin/post
 
 COPY . .
 

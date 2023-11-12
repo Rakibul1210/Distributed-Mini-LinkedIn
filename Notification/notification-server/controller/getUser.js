@@ -6,7 +6,7 @@ const userPort = process.env.USER_PORT
 const getUser = async (email) => {
     try {
         // console.log("email: " + email)
-        const response = await axios.get(`http://host.docker.internal:${userPort}/user/fetchUserInfo/${email}`);
+        const response = await axios.get(`http://host.docker.internal/user/fetchUserInfo/${email}`);
         return response.data;
     } catch (error) {
         throw error;

@@ -7,4 +7,4 @@ services:
       - '8001:8001'
     volumes:
       - ./notification-server:/linkedin/notification
-      - ./linkedin/notification/node_modules
+      - ./mini-linkedin/notification/node_modules

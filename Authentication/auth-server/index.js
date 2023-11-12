@@ -5,6 +5,7 @@ const app = express();
 const dotenv = require('dotenv');
 const userRouter = require('./user-router/userRoutes.js');
 const connectDb = require('./database/db.js')
+const mongoose = require('mongoose')
 dotenv.config();
 
 const port = process.env.PORT
@@ -14,11 +15,12 @@ app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.get('/', (req,res)=>{
-    res.send("User handler server")
+app.get('/user', (req,res)=>{
+    res.send("Linkedin User handler servers")
 })
 
 app.use('/user', userRouter);
+
 
 app.listen(port, () => {
     console.log(`Server is running on http://localhost:${port}`);

@@ -2,7 +2,7 @@ FROM node:18-alpine
 
 RUN npm install -g nodemon
 
-WORKDIR /linkedin/authentication
+WORKDIR /mini-linkedin/authentication
 
 COPY . .
 

@@ -220,7 +220,7 @@ const StartPost = () => {
     return(
         <>
         <div className="start-post-area bg-light border-rounded" onClick={handlePostClick} 
-          style={{height : '10%',marginTop:'30px', marginBottom:'20px', borderRadius:'10px',
+          style={{height : '20%',marginTop:'30px', marginBottom:'20px', borderRadius:'10px',
           boxShadow: '0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)',}}>
             <Form className='d-flex justify-content-center'>
                 <Form.Group controlId="postContent">
@@ -232,7 +232,8 @@ const StartPost = () => {
                                 width:'500px',
                                 border:'rounded',
                                 borderRadius:'50px',
-                                marginTop:'10px'                           
+                                marginTop:'10px',
+                                marginBottom: '20px'                           
                             }}
                         // onChange={handleContentChange}
                     />
@@ -240,7 +241,7 @@ const StartPost = () => {
             
             </Form> 
             
-            <div className="post-options mt-4 d-flex justify-content-between">
+            {/* <div className="post-options mt-4 d-flex justify-content-between">
 
                 <Button variant="default"  onClick={() => handleOptionClick('photo')} className="flex-fill hover-dark">
                 <i class="fa-regular fa-image"></i>
@@ -262,7 +263,7 @@ const StartPost = () => {
                 <span class="badge rounded-pill badge-notification" style={{ position: 'relative', color:'black' }}>Write Article</span>
                 </Button>
 
-            </div>
+            </div> */}
 
         </div>
         <Modal show={showModal} onHide={handleModalClose} centered>

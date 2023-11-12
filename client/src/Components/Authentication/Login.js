@@ -114,7 +114,7 @@ const Login = () => {
                             marginTop: "10px",
                             fontFamily:'sans-serif',
                             fontWeight: "bold",
-                        }}>Sign In</h2>
+                        }}>Log In</h2>
                         <Form.Item
                             name="email"
                             onChange={(e) => onValueChange(e)}
@@ -249,7 +249,7 @@ const Login = () => {
 
                                 Already on Linkedin?
                                 <Button type='Link' onClick={() => onLogin()} htmlType="submit" className="login-form-button text-primary">
-                                    Sign in
+                                    Log In
                                 </Button>
                             </Form.Item>
                         </div>

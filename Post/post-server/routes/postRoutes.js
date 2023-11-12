@@ -31,7 +31,7 @@ router.post('/createPost', checkLogin,upload.single('image'),createPost)
 router.get('/getPost',checkLogin, getPost)
 
 // router.post('/createPost',checkLogin, createPost)
-router.get('/getPost', getPost)
+// router.get('/getPost', getPost)
 router.get('/sendPost/:postId', sendPost)
 
 

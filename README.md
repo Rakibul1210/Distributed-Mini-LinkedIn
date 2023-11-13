@@ -48,13 +48,3 @@ The repository is organized into sub-projects, each representing a separate micr
 
 - For communication between microservices, additional code has been implemented to handle authorization when a user interacts with the post and notification services.
 
-## Learning Resources
-
-If you're new to Docker or want to enhance your skills, consider checking out the following resources:
-
-- [Docker in 100 seconds](link)
-- [Docker in 7 easy steps](link)
-- [Docker-compose tutorial](link)
-- [Nginx official documentation](https://docs.nginx.com/)
-
-Feel free to explore and contribute to the project. Happy coding!
